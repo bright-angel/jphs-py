@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jphs"
+version = "0.3.0"
+description = "Pure-Python port of jphs (Hide & Seek 0.3) JPEG steganography"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "GPL-2.0-or-later" }
+authors = [{ name = "Allan Latham", email = "alatham@flexsys-group.com" }]
+keywords = ["jpeg", "steganography", "jphide", "jpseek"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Topic :: Security :: Cryptography",
+]
+
+[project.scripts]
+jphide = "jphs.cli:jphide_entry"
+jpseek = "jphs.cli:jpseek_entry"
+
+[tool.setuptools.packages.find]
+where = ["src"]

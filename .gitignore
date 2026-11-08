@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Upstream sources, fetched on demand by tools/build_upstream_wsl.sh
+upstream/
+
+# Reference binaries built by tools/build_upstream_wsl.sh
+.reference/
+
+# Generated parity fixtures (tools/gen_cover_refs.sh)
+testdata/*.ref.dump
+testdata/*.ref.trans.jpg
+
+# Scratch outputs from tools/smoke_*.sh
+testdata/c_out.jpg
+testdata/c_seek.bin
+testdata/cd_*.jpg
